@@ -1,0 +1,22 @@
+@mixin large-screen {
+	@media screen and (min-width: 580px) {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: flex-start;
+		flex: 1;
+	}
+}
+
+@mixin price-large-screen {
+	@media screen and (min-width: 580px) {
+		font-size: 1.25rem;
+		padding: 0.5rem 1.5rem;
+	}
+}
+
+@mixin h2-large-screen {
+	@media screen and (min-width: 580px) {
+		font-size: 1.25rem;
+	}
+}
