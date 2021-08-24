@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../App.scss';
 const Card = (props) => {
-	const classes = 'card ' + props.className;
+	let classes = 'card ' + props.className;
 	return <div className={classes}>{props.children}</div>;
 };
 

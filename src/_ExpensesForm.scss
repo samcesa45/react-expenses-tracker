@@ -1,0 +1,25 @@
+.expenses-form {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	text-align: left;
+	margin-bottom: 1rem;
+	&__control {
+		label {
+			display: block;
+			font-weight: bold;
+			margin-bottom: 0.5rem;
+		}
+		input {
+			font: inherit;
+			padding: 0.5rem;
+			border-radius: 6px;
+			width: 20rem;
+			max-width: 100%;
+		}
+	}
+
+	&__actions {
+		text-align: right;
+	}
+}

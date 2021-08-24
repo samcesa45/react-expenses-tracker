@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Expenses from './components/Expenses/Expenses';
+import NewExpenses from './components/NewExpenses/NewExpenses';
 
 const DEMO_EXPENSES = [
 	{
@@ -23,10 +24,16 @@ const DEMO_EXPENSES = [
 	},
 ];
 const App = (props) => {
-	const [expenses, setExpenses] = useState(DEMO_EXPENSES);
+	const [addExpenses, setAddExpenses] = useState(DEMO_EXPENSES);
+	const submitExpensesHandler = (expenses) => {
+		setAddExpenses((prevExpenses) => {
+			return [...prevExpenses, expenses];
+		});
+	};
 	return (
 		<div>
-			<Expenses expenses={expenses} />
+			<NewExpenses onAddExpenses={submitExpensesHandler} />
+			<Expenses expenses={addExpenses} />
 		</div>
 	);
 };
